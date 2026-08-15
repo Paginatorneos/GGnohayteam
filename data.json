@@ -1,0 +1,1078 @@
+{
+  "tournament": {
+    "name": "GG, No hay team",
+    "edition": "2026",
+    "subtitle": "Torneo 3v3 · Age of Empires II: DE",
+    "dates": "17 – 30 de Agosto · Sábados y Domingos",
+    "organizer": "Valencho",
+    "discord": "Canal oficial de Discord de Nacho AoE",
+    "logo": "shield-circle-logo.png",
+    "backgroundHeader": "hero-banner-wordmark.png",
+    "registrationUrl": "https://forms.gle/cQzDSUX8Pfy8WNC3A",
+    "started": false,
+    "discordUrl": "https://discord.gg/UShZZNJCN"
+  },
+  "infoCards": [
+    {
+      "label": "Formato",
+      "value": "3v3 · Conquista"
+    },
+    {
+      "label": "Mapas",
+      "value": "Map Pool"
+    },
+    {
+      "label": "ELO promedio entre:",
+      "value": "800 – 1150 (ind. hasta 1300)"
+    },
+    {
+      "label": "Organiza",
+      "value": "Valencho"
+    },
+    {
+      "label": "Inscripción",
+      "value": "Hasta 16 Ago"
+    },
+    {
+      "label": "Partidas mín.",
+      "value": "40 RM (Individual)"
+    },
+    {
+      "label": "Casters",
+      "value": "GatoLoco"
+    }
+  ],
+  "rules": [
+    {
+      "title": "Admisión y ELO",
+      "text": "Rango de ELO 800–1300 en Ranked 1v1 (RM), pero el promedio del equipo no puede superar los 1150. Mínimo 40 partidas jugadas en RM (1v1 o equipo) con actividad competitiva reciente. Verificación de perfiles (AoE2 Insights / Liquipedia) para detectar smurfs; la organización se reserva el derecho de admisión."
+    },
+    {
+      "title": "Draft",
+      "text": "Civilizaciones libres ocultas sin repetir: cada jugador elige en secreto y no puede repetir civ en la serie. Se juegan 3 partidas por serie (Bo5 en la final)."
+    },
+    {
+      "title": "Map Pool",
+      "text": "Los mapas se jugarán estrictamente en el orden establecido."
+    },
+    {
+      "title": "Sala",
+      "text": "La arma el equipo con mayor ELO acumulado, con: 6 jugadores, sala pública, civs ocultas, espectadores con 2 min de delay y grabación obligatoria. Configuración de partida: mapa aleatorio tamaño mediano, velocidad normal (1.7), población 200, equipos fijos y condición de victoria por Conquista."
+    },
+    {
+      "title": "Conducta",
+      "text": "El laming (robo de recursos, matar animales del rival, empalizar campamentos enemigos) está 100% permitido. El chat se limita a pausas justificadas, problemas técnicos o GG/WP; ofensas, burlas o interacción inapropiada con espectadores es derrota automática para el infractor. Las pausas deben respetarse: si sentís que se abusa de ellas, contactá a un admin."
+    },
+    {
+      "title": "Discord",
+      "text": "Cada equipo debe permanecer en su sala de voz asignada, separado del rival. Prohibido compartir pantalla en canales públicos o dejar entrar a terceros ajenos al equipo."
+    },
+    {
+      "title": "Drops",
+      "text": "No se permiten restarts salvo autorización de la organización por bugs graves. Ante una caída, se pausa e intenta restaurar; si no se puede y hay desventaja irreparable, el organizador define reinicio o victoria directa."
+    },
+    {
+      "title": "Horarios",
+      "text": "Tolerancia de 15 min desde la hora pactada; sin los 3 jugadores conectados se pierde por escritorio. Máximo 1 reprogramación por serie."
+    },
+    {
+      "title": "Premios",
+      "text": "El equipo campeón se corona como 'Campeones Absolutos de GG, No hay team – Edición 2026'."
+    },
+    {
+      "title": "Programación y Flexibilidad",
+      "text": "En octavos y cuartos, los equipos pueden adelantar sus partidas durante la semana si ambos capitanes están de acuerdo (el acuerdo vincula a todo el equipo)."
+    },
+    {
+      "title": "Suplentes",
+      "text": "Cada equipo tiene permitido registrar a un (1) jugador suplente previo al inicio del torneo. Este jugador podrá participar ante situaciones imprevistas que impidan la asistencia de un integrante titular, siempre y cuando cumpla con los mismos requisitos de ELO (800-1100, con máximo de 1300 si el promedio lo permite) y sea aprobado por la organización al momento de la inscripción."
+    },
+    {
+      "title": "Reportes",
+      "text": "Cualquier inconveniente durante las partidas debe reportarse de inmediato a la organización, acompañado obligatoriamente de capturas de pantalla o grabaciones (recs) de la partida."
+    },
+    {
+      "title": "Sorteo de Fases",
+      "text": "Con los 16 equipos definidos, se asigna una seed a cada uno y se dividen en Grupo A (mejores seeds) y Grupo B (peores seeds). El sorteo enfrenta, de forma aleatoria, a un equipo del Grupo A contra uno del Grupo B en cada llave de Octavos."
+    }
+  ],
+  "schedule": [
+    {
+      "phase": "Inscripción",
+      "dates": "Hasta 16 de agosto"
+    },
+    {
+      "phase": "Cuartos",
+      "dates": "Hasta el 24 de agosto"
+    },
+    {
+      "phase": "Semifinal",
+      "dates": "29 de agosto"
+    },
+    {
+      "phase": "Final",
+      "dates": "30 de agosto"
+    }
+  ],
+  "maps": [
+    {
+      "name": "Arabia",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/6/66/Rm_arabia.png/revision/latest?cb=20250409045149"
+    },
+    {
+      "name": "Claro Africano",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/e/e6/Rm_african_clearing.png/revision/latest?cb=20250409050001"
+    },
+    {
+      "name": "Túnel Amazónico",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/0/00/Rm_amazon_tunnels.png/revision/latest/scale-to-width-down/268?cb=20250409050121"
+    },
+    {
+      "name": "Isla del Paraíso",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/d/d5/Rm_paradise_island.png/revision/latest?cb=20250728145224"
+    },
+    {
+      "name": "Socotra",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/d/d8/Rm_socotra.png/revision/latest?cb=20250409055228"
+    },
+    {
+      "name": "Arena",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/7/72/Rm_arena.png/revision/latest?cb=20250409050205"
+    },
+    {
+      "name": "Oasis",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/e/e8/Rm_oasis.png/revision/latest?cb=20250409055103"
+    },
+    {
+      "name": "Isla en equipos",
+      "image": "https://static.wikia.nocookie.net/ageofempires/images/a/a5/Rm_team-islands.png/revision/latest?cb=20250409054626"
+    }
+  ],
+  "prize": {
+    "title": "Campeones Absolutos",
+    "description": "GG, No hay team – Edición 2026"
+  },
+  "fixture": {
+    "rounds": [
+      {
+        "name": "Octavos",
+        "bestOf": 3,
+        "matches": [
+          {
+            "id": "oct_1",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_2",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_3",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_4",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_5",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_6",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_7",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "oct_8",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Isla en equipos"
+        ]
+      },
+      {
+        "name": "Cuartos",
+        "bestOf": 3,
+        "matches": [
+          {
+            "id": "cuart_1",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "cuart_2",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "cuart_3",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "cuart_4",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Socotra"
+        ]
+      },
+      {
+        "name": "Semifinal",
+        "bestOf": 3,
+        "matches": [
+          {
+            "id": "sem_1",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "sem_2",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Túnel Amazónico"
+        ]
+      },
+      {
+        "name": "Final",
+        "bestOf": 5,
+        "matches": [
+          {
+            "id": "final",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Claro Africano",
+          "Oasis",
+          "Isla del Paraíso"
+        ]
+      }
+    ]
+  },
+  "rulesFile": "https://docs.google.com/document/d/1SO4anQUaUPiC7Qma7t6ENFLlsVVCa5Knc0PbILBa7zM/edit?usp=sharing"
+}

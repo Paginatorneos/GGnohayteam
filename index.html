@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GG, No hay team - Torneo 3v3 AoE II</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Inter:wght@400;600;700;800&display=swap');
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: #2a2a3a;
+      --gold: #c9a84c;
+      --gold-dim: #8a7230;
+      --green: #3aa86b;
+      --red: #a83a3a;
+      --text: #e8e0d0;
+      --text-muted: #8a8678;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .bg-texture {
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(107, 63, 160, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+      transition: padding 0.3s;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: center / cover no-repeat;
+      opacity: 0.12;
+      z-index: -1;
+    }
+
+    .hero-logo {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 40px rgba(201, 168, 76, 0.2);
+      transition: all 0.3s;
+    }
+
+    .hero h1 {
+      font-family: 'MedievalSharp', cursive;
+      font-size: 2.8rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+      transition: font-size 0.3s;
+    }
+
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .hero .tagline {
+      margin-top: 12px;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .started .hero {
+      padding: 28px 0 20px;
+      border-bottom-width: 0;
+    }
+
+    .started .hero-bg {
+      opacity: 0.06;
+    }
+
+    .started .hero-logo {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 10px;
+      border-width: 2px;
+    }
+
+    .started .hero h1 {
+      font-size: 1.6rem;
+    }
+
+    .started .hero .subtitle,
+    .started .hero .tagline,
+    .started .hero .btn-primary {
+      display: none;
+    }
+
+    .started .hero .hero-status {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 48px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+      color: #0a0a0f;
+      margin-top: 24px;
+      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(201, 168, 76, 0.35);
+    }
+
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-family: 'MedievalSharp', cursive;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 12px;
+      text-align: center;
+    }
+
+    .info-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .info-card .value {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .rules-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rules-list li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.95rem;
+    }
+
+    .rules-list li::before {
+      content: "⚔";
+      flex-shrink: 0;
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .rules-list li strong {
+      color: var(--gold);
+    }
+
+    .rules-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .rules-link a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--gold-dim);
+      font-weight: 600;
+    }
+
+    .rules-link a:hover { color: #dbb85c; }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .schedule-table th {
+      color: var(--gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+    }
+
+    .schedule-table td { color: var(--text-muted); }
+    .schedule-table tr:hover td { color: var(--text); }
+
+    .map-pool-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .map-pool-table th,
+    .map-pool-table td {
+      padding: 12px 10px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .map-pool-table th {
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      background: var(--surface);
+    }
+
+    .map-pool-table .round-label-cell {
+      background: var(--surface);
+      text-align: left;
+      padding-left: 16px;
+    }
+
+    .map-pool-table .round-label-cell .round-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .map-pool-table .round-label-cell .round-bo {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .map-pool-cell {
+      background: var(--surface);
+    }
+
+    .map-pool-cell img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 6px;
+      border: 1px solid var(--border);
+    }
+
+    .map-pool-cell .map-pool-name {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .map-pool-cell.empty-slot {
+      color: var(--border);
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    .prize-box {
+      background: var(--surface);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .prize-box h3 {
+      font-family: 'MedievalSharp', cursive;
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .prize-box p { color: var(--text-muted); }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ===== FIXTURE ===== */
+    .fixture-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .fixture-nav button {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .fixture-nav button:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .fixture-nav button.active {
+      background: var(--gold);
+      color: #0a0a0f;
+      border-color: var(--gold);
+    }
+
+    .round-view {
+      display: none;
+    }
+
+    .round-view.active {
+      display: block;
+    }
+
+    .round-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .round-header h3 {
+      font-family: 'MedievalSharp', cursive;
+      font-size: 1.5rem;
+      color: var(--gold);
+    }
+
+    .round-format {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--surface);
+      padding: 4px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .matches-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .match-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .match-card.has-winner {
+      border-color: var(--gold);
+    }
+
+    .match-teams {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      padding: 16px;
+      align-items: center;
+    }
+
+    .team-slot {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+      min-height: 100px;
+    }
+
+    .team-slot.winner {
+      border-color: var(--gold);
+      background: rgba(201, 168, 76, 0.06);
+    }
+
+    .team-slot.loser {
+      opacity: 0.55;
+    }
+
+    .team-slot.tbd {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.9rem;
+      border-style: dashed;
+    }
+
+    .team-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .team-name .win-badge {
+      background: var(--gold);
+      color: #0a0a0f;
+      font-size: 0.6rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .team-players {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .player-row {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .player-elo {
+      color: var(--gold-dim);
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    .player-flag {
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .vs-divider {
+      font-weight: 800;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .score-display {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .score-display .score {
+      line-height: 1;
+    }
+
+    .score-display .score.score-winner {
+      color: var(--gold);
+    }
+
+    .score-display .score.score-loser {
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    .score-display .score-dash {
+      color: var(--border);
+      font-size: 1.2rem;
+    }
+
+    .series-games {
+      padding: 0 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .game-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .game-card.team1-wins { border-color: var(--green); }
+    .game-card.team2-wins { border-color: var(--red); }
+
+    .game-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .game-number {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    .game-map {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      text-align: right;
+    }
+
+    .game-map.tbd {
+      color: var(--text-muted);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .game-civs {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .game-civs-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .game-civs-team.team2 {
+      justify-content: flex-end;
+    }
+
+    .civ-slot {
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: var(--surface);
+      white-space: nowrap;
+    }
+
+    .civ-slot.tbd {
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    .game-civs-vs {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .empty-fixture {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+    }
+
+    .empty-fixture p {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .match-teams {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .vs-divider {
+        display: none;
+      }
+      .score-display {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        padding: 4px 0;
+      }
+      .score-display .score-dash {
+        display: none;
+      }
+      .team-slot {
+        min-height: auto;
+        padding: 10px;
+      }
+      .game-civs {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .game-civs-vs {
+        display: none;
+      }
+      .game-civs-team.team2 {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero-logo { width: 120px; height: 120px; }
+      .started .hero { padding: 20px 0 16px; }
+      .started .hero-logo { width: 56px; height: 56px; }
+      .started .hero h1 { font-size: 1.3rem; }
+      .section-title { font-size: 1.4rem; }
+      .info-grid { grid-template-columns: 1fr 1fr; }
+      .map-pool-table th, .map-pool-table td { padding: 8px 4px; }
+      .map-pool-cell img { width: 38px; height: 38px; }
+      .map-pool-cell .map-pool-name { font-size: 0.62rem; }
+      .map-pool-table .round-label-cell .round-name { font-size: 0.8rem; }
+      section { padding: 32px 0; }
+      .container { padding: 0 16px; }
+      .matches-grid { gap: 14px; }
+    }
+
+    @media (max-width: 400px) {
+      .info-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .btn { padding: 14px 32px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-texture"></div>
+
+<div class="container" id="app">
+  <div style="text-align:center; padding:60px 0; color:var(--text-muted);">Cargando...</div>
+</div>
+
+<script>
+fetch('data.json')
+  .then(r => r.json())
+  .then(d => render(d))
+  .catch(() => {
+    document.getElementById('app').innerHTML =
+      `<div style="text-align:center;padding:60px 0;color:var(--text-muted);">Error al cargar los datos.</div>`;
+  });
+
+function render(d) {
+  const t = d.tournament;
+  const started = t.started;
+  const app = document.getElementById('app');
+
+  if (started) {
+    document.body.classList.add('started');
+  }
+
+  const heroStatusHtml = started ? '<p class="hero-status">Torneo en curso</p>' : '';
+
+  const heroHtml = `
+    <header class="hero">
+      <div class="hero-bg" style="background-image:url('${t.backgroundHeader}')"></div>
+      <img src="${t.logo}" alt="${t.name}" class="hero-logo">
+      <h1>${t.name}</h1>
+      ${heroStatusHtml}
+      <p class="subtitle">${t.subtitle}</p>
+      <p class="tagline">${t.dates}</p>
+      <a href="${t.registrationUrl}" class="btn btn-primary" target="_blank" rel="noopener">Inscribite acá</a>
+    </header>`;
+
+  const infoHtml = `<section><h2 class="section-title">Información General</h2><div class="info-grid" id="infoGrid"></div></section>`;
+  const regHtml = `<section style="text-align:center;"><h2 class="section-title">Formulario de Inscripción</h2><p style="color:var(--text-muted);margin-bottom:8px;">Completá el formulario con los datos de tu equipo para participar.</p><a href="${t.registrationUrl}" class="btn btn-primary" target="_blank" rel="noopener">Ir al formulario</a></section>`;
+  const rulesHtml = `<section><h2 class="section-title">Reglas Destacadas</h2><ul class="rules-list" id="rulesList"></ul><div class="rules-link"><a href="${d.rulesFile}" target="_blank">Leer reglamento completo →</a></div></section>`;
+  const schedHtml = `<section><h2 class="section-title">Cronograma</h2><table class="schedule-table"><thead><tr><th>Fase</th><th>Fechas</th></tr></thead><tbody id="scheduleBody"></tbody></table></section>`;
+  const mapsHtml = `<section><h2 class="section-title">Mapas</h2><p style="text-align:center;color:var(--text-muted);margin-bottom:16px;">Pool de mapas por ronda:</p><div id="mapsPoolContainer" style="overflow-x:auto;"></div></section>`;
+  const fixtureHtml = `<section id="fixtureSection"><h2 class="section-title">Fixture</h2><div id="fixtureContent"></div></section>`;
+  const prizeHtml = `<section><h2 class="section-title">Premios</h2><div class="prize-box"><h3>${d.prize.title}</h3><p>${d.prize.description}</p></div></section>`;
+  const discordLine = t.discordUrl ? `<a href="${t.discordUrl}" target="_blank" rel="noopener">${t.discord}</a>` : t.discord;
+  const footerHtml = `<footer><p>Organizado por <strong>${t.organizer}</strong> · Comunicación oficial por ${discordLine}</p><p style="margin-top:6px;"><a href="${t.registrationUrl}" target="_blank">Inscribite acá</a></p></footer>`;
+
+  let sections;
+  if (started) {
+    sections = [heroHtml, fixtureHtml, infoHtml, regHtml, rulesHtml, schedHtml, mapsHtml, prizeHtml, footerHtml];
+  } else {
+    sections = [heroHtml, infoHtml, regHtml, rulesHtml, schedHtml, mapsHtml, fixtureHtml, prizeHtml, footerHtml];
+  }
+
+  app.innerHTML = sections.join('');
+
+  d.infoCards.forEach(c => {
+    document.getElementById('infoGrid').innerHTML +=
+      `<div class="info-card"><div class="label">${c.label}</div><div class="value">${c.value}</div></div>`;
+  });
+
+  d.rules.forEach(r => {
+    document.getElementById('rulesList').innerHTML +=
+      `<li><strong>${r.title}:</strong> ${r.text}</li>`;
+  });
+
+  d.schedule.forEach(s => {
+    document.getElementById('scheduleBody').innerHTML +=
+      `<tr><td>${s.phase}</td><td>${s.dates}</td></tr>`;
+  });
+
+  renderMapPool(d);
+
+  renderFixture(d);
+}
+
+function renderFixture(d) {
+  const fixture = d.fixture;
+  if (!fixture || !fixture.rounds || fixture.rounds.length === 0) return;
+
+  const container = document.getElementById('fixtureContent');
+  let navHtml = '<div class="fixture-nav">';
+  let roundsHtml = '';
+
+  fixture.rounds.forEach((round, ri) => {
+    const isFirst = ri === 0;
+    navHtml += `<button class="${isFirst ? 'active' : ''}" data-round="${ri}">${round.name}</button>`;
+
+    roundsHtml += `<div class="round-view ${isFirst ? 'active' : ''}" data-round="${ri}">
+      <div class="round-header">
+        <h3>${round.name}</h3>
+        <span class="round-format">Bo${round.bestOf}</span>
+      </div>
+      <div class="matches-grid">`;
+
+    if (!round.matches || round.matches.length === 0) {
+      roundsHtml += `<div class="empty-fixture"><p>Sin partidos aún</p></div>`;
+    } else {
+      round.matches.forEach(m => {
+        roundsHtml += renderMatch(m, round.bestOf);
+      });
+    }
+
+    roundsHtml += `</div></div>`;
+  });
+
+  navHtml += '</div>';
+  container.innerHTML = navHtml + roundsHtml;
+
+  document.querySelectorAll('.fixture-nav button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.fixture-nav button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.round-view').forEach(v => v.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector(`.round-view[data-round="${btn.dataset.round}"]`).classList.add('active');
+    });
+  });
+}
+
+function renderMatch(m, bestOf) {
+  const t1 = m.team1;
+  const t2 = m.team2;
+  const hasWinner = m.winner !== null;
+  const t1Wins = m.games ? m.games.filter(g => g.winner === 'team1').length : 0;
+  const t2Wins = m.games ? m.games.filter(g => g.winner === 'team2').length : 0;
+
+  const t1Html = t1 ? renderTeam(t1, hasWinner && m.winner === 'team1', m.winner !== null && m.winner !== 'team1') : renderTbd();
+  const t2Html = t2 ? renderTeam(t2, hasWinner && m.winner === 'team2', m.winner !== null && m.winner !== 'team2') : renderTbd();
+
+  const hasGames = m.games && m.games.length > 0;
+  const mapsHtml = hasGames ? renderGames(m.games) : '';
+
+  return `<div class="match-card ${hasWinner ? 'has-winner' : ''}">
+    <div class="match-teams">
+      ${t1Html}
+      <div class="vs-divider">VS</div>
+      <div class="score-display">
+        <span class="score ${hasWinner && m.winner === 'team1' ? 'score-winner' : 'score-loser'}">${t1Wins}</span>
+        <span class="score-dash">—</span>
+        <span class="score ${hasWinner && m.winner === 'team2' ? 'score-winner' : 'score-loser'}">${t2Wins}</span>
+      </div>
+      ${t2Html}
+    </div>
+    ${mapsHtml}
+  </div>`;
+}
+
+function renderTeam(team, isWinner, isLoser) {
+  const winBadge = isWinner ? '<span class="win-badge">Ganó</span>' : '';
+  const playersHtml = team.players.map(p => {
+    const flag = p.nationality || '';
+    const elo = p.elo ? `<span class="player-elo">${p.elo}elo</span>` : '';
+    return `<div class="player-row">${flag ? `<span class="player-flag">${flag}</span>` : ''}${p.name} ${elo}</div>`;
+  }).join('');
+
+  return `<div class="team-slot ${isWinner ? 'winner' : ''} ${isLoser ? 'loser' : ''}">
+    <div class="team-name">${team.name} ${winBadge}</div>
+    <div class="team-players">${playersHtml}</div>
+  </div>`;
+}
+
+function renderTbd() {
+  return `<div class="team-slot tbd">Por definir</div>`;
+}
+
+function renderGames(games) {
+  let html = '<div class="series-games">';
+
+  games.forEach((g, i) => {
+    const cls = g.winner === 'team1' ? 'team1-wins' : g.winner === 'team2' ? 'team2-wins' : '';
+    const mapValue = g.map && g.map.trim() !== '' ? g.map : null;
+    const mapHtml = mapValue
+      ? `<span class="game-map">${mapValue}</span>`
+      : `<span class="game-map tbd">Mapa por definir</span>`;
+
+    const civs1 = (g.civs && g.civs.team1) || [];
+    const civs2 = (g.civs && g.civs.team2) || [];
+
+    html += `
+      <div class="game-card ${cls}">
+        <div class="game-header">
+          <span class="game-number">Partida ${i + 1}</span>
+          ${mapHtml}
+        </div>
+        <div class="game-civs">
+          <div class="game-civs-team team1">${renderCivs(civs1)}</div>
+          <span class="game-civs-vs">VS</span>
+          <div class="game-civs-team team2">${renderCivs(civs2)}</div>
+        </div>
+      </div>`;
+  });
+
+  html += '</div>';
+  return html;
+}
+
+function renderCivs(civs) {
+  if (!civs || civs.length === 0) return `<span class="civ-slot tbd">Civs por definir</span>`;
+  return civs.map(c => {
+    const value = c && c.trim() !== '' ? c : null;
+    return value
+      ? `<span class="civ-slot">${value}</span>`
+      : `<span class="civ-slot tbd">Civ por definir</span>`;
+  }).join('');
+}
+
+function renderMapPool(d) {
+  const container = document.getElementById('mapsPoolContainer');
+  const rounds = d.fixture && d.fixture.rounds ? d.fixture.rounds : [];
+  if (rounds.length === 0) { container.innerHTML = ''; return; }
+
+  const mapsByName = {};
+  (d.maps || []).forEach(m => { mapsByName[m.name] = m.image; });
+
+  const maxMaps = Math.max(...rounds.map(r => (r.mapPool || []).length), 1);
+
+  let headerCells = '';
+  for (let i = 1; i <= maxMaps; i++) headerCells += `<th>Mapa ${i}</th>`;
+
+  let rowsHtml = '';
+  rounds.forEach(r => {
+    const pool = r.mapPool || [];
+    let cells = '';
+    for (let i = 0; i < maxMaps; i++) {
+      const mapName = pool[i];
+      if (!mapName) {
+        cells += `<td class="map-pool-cell empty-slot">✕</td>`;
+      } else {
+        const img = mapsByName[mapName];
+        cells += `<td class="map-pool-cell">${img ? `<img src="${img}" alt="${mapName}" loading="lazy">` : ''}<div class="map-pool-name">${mapName}</div></td>`;
+      }
+    }
+    rowsHtml += `<tr><td class="round-label-cell"><span class="round-name">${r.name}</span><span class="round-bo">Bo${r.bestOf}</span></td>${cells}</tr>`;
+  });
+
+  container.innerHTML = `<table class="map-pool-table"><thead><tr><th></th>${headerCells}</tr></thead><tbody>${rowsHtml}</tbody></table>`;
+}
+</script>
+</body>
+</html>
