@@ -165,8 +165,8 @@
         "matches": [
           {
             "id": "previa_1",
-            "team1": Pijudos,
-            "team2": Danteneta,
+            "team1": "Pijudos",
+            "team2": "Danteneta",
             "games": [
               {
                 "map": "",
@@ -221,8 +221,8 @@
           },
           {
             "id": "previa_2",
-            "team1": Haydee,
-            "team2": Mas pijudos que p ,
+            "team1": "Haydee",
+            "team2": "Mas pijudos que pijudos" ,
             "games": [
               {
                 "map": "",
@@ -279,8 +279,8 @@
       },
             {
             "id": "previa_3",
-            "team1": Detonage,
-            "team2": Toponeteros Crew,
+            "team1": "Detonage",
+            "team2": "Toponeteros Crew",
             "games": [
               {
                 "map": "",
@@ -346,8 +346,8 @@
         "matches": [
           {
             "id": "cuart_1",
-            "team1": Drink Team,
-            "team2": Ganador Previa 1 (Pijudos / Danteneta),
+            "team1": "Drink Team",
+            "team2": "Ganador Previa 1 (Pijudos / Danteneta)",
             "games": [
               {
                 "map": "",
@@ -402,8 +402,8 @@
           },
           {
             "id": "cuart_2",
-            "team1": How do you turn this on ,
-            "team2": Ganador Previa 2 (Haydee / Mas Pijudos que Pijudos),
+            "team1": "How do you turn this on",
+            "team2": "Ganador Previa 2 (Haydee / Mas Pijudos que Pijudos)",
             "games": [
               {
                 "map": "",
@@ -458,8 +458,8 @@
           },
           {
             "id": "cuart_3",
-            "team1": Los Wancas,
-            "team2":  Ganador Previa 3 (Detonage / Toponeteros Crew),
+            "team1": "Los Wancas",
+            "team2": "Ganador Previa 3 (Detonage / Toponeteros Crew)",
             "games": [
               {
                 "map": "",
@@ -514,8 +514,8 @@
           },
           {
             "id": "cuart_4",
-            "team1": HDSON,
-            "team2":  NTM,
+            "team1": "HDSON",
+            "team2":  "NTM",
             "games": [
               {
                 "map": "",
