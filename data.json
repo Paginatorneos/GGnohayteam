@@ -49,7 +49,7 @@
     },
     {
       "title": "Map Pool",
-      "text": "Los mapas se jugarán strictly en el orden establecido."
+      "text": "Los mapas se jugarán estrictamente en el orden establecido."
     },
     {
       "title": "Sala",
@@ -165,8 +165,8 @@
         "matches": [
           {
             "id": "previa_1",
-            "team1": "Pijudos",
-            "team2": "Danteneta",
+            "team1": null,
+            "team2": null,
             "games": [
               {
                 "map": "",
@@ -221,64 +221,8 @@
           },
           {
             "id": "previa_2",
-            "team1": "Haydee",
-            "team2": "Mas Pijudos que Pijudos",
-            "games": [
-              {
-                "map": "",
-                "winner": null,
-                "civs": {
-                  "team1": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "team2": [
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              },
-              {
-                "map": "",
-                "winner": null,
-                "civs": {
-                  "team1": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "team2": [
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              },
-              {
-                "map": "",
-                "winner": null,
-                "civs": {
-                  "team1": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "team2": [
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              }
-            ],
-            "winner": null
-          },
-          {
-            "id": "previa_3",
-            "team1": "Detonage",
-            "team2": "Toponeteros Crew",
+            "team1": null,
+            "team2": null,
             "games": [
               {
                 "map": "",
@@ -344,8 +288,8 @@
         "matches": [
           {
             "id": "cuart_1",
-            "team1": "Drink Team",
-            "team2": "Ganador Previa 1",
+            "team1": null,
+            "team2": null,
             "games": [
               {
                 "map": "",
@@ -400,8 +344,8 @@
           },
           {
             "id": "cuart_2",
-            "team1": "How do you turn this on",
-            "team2": "Ganador Previa 2",
+            "team1": null,
+            "team2": null,
             "games": [
               {
                 "map": "",
@@ -456,8 +400,8 @@
           },
           {
             "id": "cuart_3",
-            "team1": "Los Wancas",
-            "team2": "Ganador Previa 3",
+            "team1": null,
+            "team2": null,
             "games": [
               {
                 "map": "",
@@ -512,8 +456,8 @@
           },
           {
             "id": "cuart_4",
-            "team1": "HDSON",
-            "team2": "NTM",
+            "team1": null,
+            "team2": null,
             "games": [
               {
                 "map": "",
