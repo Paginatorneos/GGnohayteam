@@ -89,7 +89,7 @@
     },
     {
       "title": "Sorteo de Fases",
-      "text": "Con los 8 equipos definidos, se asigna una seed a cada uno y se dividen en Grupo A (mejores seeds) y Grupo B (peores seeds). El sorteo enfrenta, de forma aleatoria, a un equipo del Grupo A contra uno del Grupo B en cada llave de Cuartos."
+      "text": "Con los 11 equipos definidos, se asigna una seed a cada uno y se dividen en Grupo A (mejores seeds) y Grupo B (peores seeds). El sorteo enfrenta, de forma aleatoria, a un equipo del Grupo A contra uno del Grupo B en cada llave de Cuartos."
     }
   ],
   "schedule": [
@@ -98,12 +98,16 @@
       "dates": "Hasta 16 de agosto"
     },
     {
+      "phase": "Fase Previa",
+      "dates": "Hasta el 23 de agosto"
+    },
+    {
       "phase": "Cuartos",
-      "dates": "Hasta el 24 de agosto"
+      "dates": "Hasta el 29 de agosto"
     },
     {
       "phase": "Semifinal",
-      "dates": "29 de agosto"
+      "dates": "30 de agosto"
     },
     {
       "phase": "Final",
@@ -150,6 +154,129 @@
   },
   "fixture": {
     "rounds": [
+      {
+        "name": "Fase Previa",
+        "bestOf": 3,
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Socotra"
+        ],
+        "matches": [
+          {
+            "id": "previa_1",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          },
+          {
+            "id": "previa_2",
+            "team1": null,
+            "team2": null,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          }
+        ]
+      },
       {
         "name": "Cuartos",
         "bestOf": 3,
