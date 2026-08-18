@@ -167,11 +167,43 @@
             "id": "previa_1",
             "team1": {
               "name": "Pijudos",
-              "players": []
+              "players": [
+                {
+                  "name": "Peskdt",
+                  "elo": 1248,
+                  "nationality": null
+                },
+                {
+                  "name": "NT | MCLovin1986",
+                  "elo": 1268,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "Sleepy",
+                  "elo": 1146,
+                  "nationality": "Chile"
+                }
+              ]
             },
             "team2": {
               "name": "Danteneta",
-              "players": []
+              "players": [
+                {
+                  "name": "Corrupted Monk",
+                  "elo": 1338,
+                  "nationality": "Costa Rica"
+                },
+                {
+                  "name": "NTM.daniel.echeverri3",
+                  "elo": 1086,
+                  "nationality": "Colombia"
+                },
+                {
+                  "name": "RickySuSo",
+                  "elo": 828,
+                  "nationality": "Usa"
+                }
+              ]
             },
             "games": [
               {
