@@ -165,8 +165,8 @@
         "matches": [
           {
             "id": "previa_1",
-            "team1": null,
-            "team2": null,
+            "team1": Pijudos,
+            "team2": Danteneta,
             "games": [
               {
                 "map": "",
@@ -221,8 +221,66 @@
           },
           {
             "id": "previa_2",
-            "team1": null,
-            "team2": null,
+            "team1": Haydee,
+            "team2": Mas pijudos que p ,
+            "games": [
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              },
+              {
+                "map": "",
+                "winner": null,
+                "civs": {
+                  "team1": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "team2": [
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              }
+            ],
+            "winner": null
+          }
+        ]
+      },
+            {
+            "id": "previa_3",
+            "team1": Detonage,
+            "team2": Toponeteros Crew,
             "games": [
               {
                 "map": "",
@@ -288,8 +346,8 @@
         "matches": [
           {
             "id": "cuart_1",
-            "team1": null,
-            "team2": null,
+            "team1": Drink Team,
+            "team2": Ganador Previa 1 (Pijudos / Danteneta),
             "games": [
               {
                 "map": "",
@@ -344,8 +402,8 @@
           },
           {
             "id": "cuart_2",
-            "team1": null,
-            "team2": null,
+            "team1": How do you turn this on ,
+            "team2": Ganador Previa 2 (Haydee / Mas Pijudos que Pijudos),
             "games": [
               {
                 "map": "",
@@ -400,8 +458,8 @@
           },
           {
             "id": "cuart_3",
-            "team1": null,
-            "team2": null,
+            "team1": Los Wancas,
+            "team2":  Ganador Previa 3 (Detonage / Toponeteros Crew),
             "games": [
               {
                 "map": "",
@@ -456,8 +514,8 @@
           },
           {
             "id": "cuart_4",
-            "team1": null,
-            "team2": null,
+            "team1": HDSON,
+            "team2":  NTM,
             "games": [
               {
                 "map": "",
