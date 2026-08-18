@@ -261,11 +261,43 @@
             "id": "previa_2",
             "team1": {
               "name": "Haydee",
-              "players": []
+              "players": [
+                {
+                  "name": "Talaxín",
+                  "elo": 1012,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "RuloEstuvoAcá",
+                  "elo": 950,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "Oneastheothers",
+                  "elo": 943,
+                  "nationality": "Argentina"
+                }
+              ]
             },
             "team2": {
               "name": "Mas Pijudos que Pijudos",
-              "players": []
+              "players": [
+                {
+                  "name": "B3rm3",
+                  "elo": 731,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "KbronCaltzonzi",
+                  "elo": 981,
+                  "nationality": "México"
+                },
+                {
+                  "name": "",
+                  "elo": null,
+                  "nationality": null
+                }
+              ]
             },
             "games": [
               {
@@ -323,11 +355,43 @@
             "id": "previa_3",
             "team1": {
               "name": "Detonage",
-              "players": []
+              "players": [
+                {
+                  "name": "Chanchoman21",
+                  "elo": null,
+                  "nationality": null
+                },
+                {
+                  "name": "Danichoo",
+                  "elo": null,
+                  "nationality": null
+                },
+                {
+                  "name": "Wolf",
+                  "elo": null,
+                  "nationality": "Argentina"
+                }
+              ]
             },
             "team2": {
               "name": "Toponeteros Crew",
-              "players": []
+              "players": [
+                {
+                  "name": "EL TOPO YIYO",
+                  "elo": 1075,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "HumanoArg",
+                  "elo": 1066,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "VZ | Facuaoe",
+                  "elo": 1025,
+                  "nationality": "Argentina"
+                }
+              ]
             },
             "games": [
               {
