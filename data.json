@@ -460,7 +460,23 @@
             "id": "cuart_1",
             "team1": {
               "name": "Drink Team",
-              "players": []
+              "players": [
+                {
+                  "name": "Moralelastic",
+                  "elo": 1208,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "EZEKIEL_2517",
+                  "elo": 1163,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "Fisherman",
+                  "elo": 879,
+                  "nationality": "Argentina"
+                }
+              ]
             },
             "team2": {
               "name": "Ganador Previa 1 (Pijudos / Danteneta)",
@@ -522,7 +538,23 @@
             "id": "cuart_2",
             "team1": {
               "name": "How do you turn this on",
-              "players": []
+              "players": [
+                {
+                  "name": "AiM | EL MAESTRO DEL TEMPLE",
+                  "elo": 1005,
+                  "nationality": "México"
+                },
+                {
+                  "name": "Manucha",
+                  "elo": 763,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "HardGauchouy",
+                  "elo": 815,
+                  "nationality": "Uruguay"
+                }
+              ]
             },
             "team2": {
               "name": "Ganador Previa 2 (Haydee / Mas Pijudos que Pijudos)",
@@ -584,7 +616,23 @@
             "id": "cuart_3",
             "team1": {
               "name": "Los Wancas",
-              "players": []
+              "players": [
+                {
+                  "name": "RafaelKubo",
+                  "elo": 1149,
+                  "nationality": "Peru"
+                },
+                {
+                  "name": "Kaifanestro",
+                  "elo": 596,
+                  "nationality": "Peru"
+                },
+                {
+                  "name": "Hitokirivan",
+                  "elo": 980,
+                  "nationality": "Peru"
+                }
+              ]
             },
             "team2": {
               "name": "Ganador Previa 3 (Detonage / Toponeteros Crew)",
@@ -646,11 +694,43 @@
             "id": "cuart_4",
             "team1": {
               "name": "HDSON",
-              "players": []
+              "players": [
+                {
+                  "name": "HDSON.menoncab",
+                  "elo": 990,
+                  "nationality": "México"
+                },
+                {
+                  "name": "HDSON.Stilson16",
+                  "elo": 1056,
+                  "nationality": "Usa"
+                },
+                {
+                  "name": "HDSON.Banano",
+                  "elo": 786,
+                  "nationality": "México"
+                }
+              ]
             },
             "team2": {
               "name": "NTM",
-              "players": []
+              "players": [
+                {
+                  "name": "ntm.KongDiablo",
+                  "elo": 1120,
+                  "nationality": "México"
+                },
+                {
+                  "name": "NTM.El_Dudu",
+                  "elo": 1233,
+                  "nationality": "México"
+                },
+                {
+                  "name": "NTM.Dropee",
+                  "elo": 932,
+                  "nationality": "Argentina"
+                }
+              ]
             },
             "games": [
               {
