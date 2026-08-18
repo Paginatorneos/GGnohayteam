@@ -165,8 +165,8 @@
         "matches": [
           {
             "id": "previa_1",
-            "team1": null,
-            "team2": null,
+            "team1": "Pijudos",
+            "team2": "Danteneta",
             "games": [
               {
                 "map": "",
@@ -221,8 +221,8 @@
           },
           {
             "id": "previa_2",
-            "team1": null,
-            "team2": null,
+            "team1": "Haydee",
+            "team2": "Mas pijudos que pijudos",
             "games": [
               {
                 "map": "",
