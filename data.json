@@ -89,7 +89,7 @@
     },
     {
       "title": "Sorteo de Fases",
-      "text": "Con los 8 equipos definidos, se asigna una seed a cada uno y se dividen en Grupo A (mejores seeds) y Grupo B (peores seeds). El sorteo enfrenta, de forma aleatoria, a un equipo del Grupo A contra uno del Grupo B en cada llave de Cuartos."
+      "text": "Con los 11 equipos definidos, se asigna una seed a cada uno y se dividen en Grupo A (mejores seeds) y Grupo B (peores seeds). El sorteo enfrenta, de forma aleatoria, a un equipo del Grupo A contra uno del Grupo B en cada llave de Cuartos."
     }
   ],
   "schedule": [
@@ -160,7 +160,7 @@
         "mapPool": [
           "Arabia",
           "Arena",
-          "Socotra"
+          "Oasis"
         ],
         "matches": [
           {
@@ -170,7 +170,7 @@
               "players": [
                 {
                   "name": "Peskdt",
-                  "elo": 1248,
+                  "elo": 1050,
                   "nationality": null
                 },
                 {
@@ -358,17 +358,17 @@
               "players": [
                 {
                   "name": "Chanchoman21",
-                  "elo": null,
-                  "nationality": null
+                  "elo": 1192,
+                  "nationality": "Chile"
                 },
                 {
                   "name": "Danichoo",
-                  "elo": null,
-                  "nationality": null
+                  "elo": 998,
+                  "nationality": "Chile"
                 },
                 {
                   "name": "Wolf",
-                  "elo": null,
+                  "elo": 1031,
                   "nationality": "Argentina"
                 }
               ]
