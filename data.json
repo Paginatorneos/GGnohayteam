@@ -9,7 +9,7 @@
     "logo": "shield-circle-logo.png",
     "backgroundHeader": "hero-banner-wordmark.png",
     "registrationUrl": "https://forms.gle/cQzDSUX8Pfy8WNC3A",
-    "started": false,
+    "started": true,
     "discordUrl": "https://discord.gg/UShZZNJCN"
   },
   "infoCards": [
@@ -450,6 +450,11 @@
       {
         "name": "Cuartos",
         "bestOf": 3,
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Socotra"
+        ],
         "matches": [
           {
             "id": "cuart_1",
@@ -795,16 +800,16 @@
             ],
             "winner": null
           }
-        ],
-        "mapPool": [
-          "Arabia",
-          "Arena",
-          "Socotra"
         ]
       },
       {
         "name": "Semifinal",
         "bestOf": 3,
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Túnel Amazónico"
+        ],
         "matches": [
           {
             "id": "sem_1",
@@ -918,16 +923,18 @@
             ],
             "winner": null
           }
-        ],
-        "mapPool": [
-          "Arabia",
-          "Arena",
-          "Túnel Amazónico"
         ]
       },
       {
         "name": "Final",
         "bestOf": 5,
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Claro Africano",
+          "Isla en equipos",
+          "Isla del Paraíso"
+        ],
         "matches": [
           {
             "id": "final",
@@ -1017,13 +1024,6 @@
             ],
             "winner": null
           }
-        ],
-        "mapPool": [
-          "Arabia",
-          "Arena",
-          "Claro Africano",
-          "Isla en equipos",
-          "Isla del Paraíso"
         ]
       }
     ]
