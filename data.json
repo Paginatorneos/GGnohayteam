@@ -9,7 +9,7 @@
     "logo": "shield-circle-logo.png",
     "backgroundHeader": "hero-banner-wordmark.png",
     "registrationUrl": "https://forms.gle/cQzDSUX8Pfy8WNC3A",
-    "started": true,
+    "started": false,
     "discordUrl": "https://discord.gg/UShZZNJCN"
   },
   "infoCards": [
@@ -170,7 +170,7 @@
               "players": [
                 {
                   "name": "Peskdt",
-                  "elo": 1050,
+                  "elo": 1248,
                   "nationality": null
                 },
                 {
@@ -207,8 +207,8 @@
             },
             "games": [
               {
-                "map": "",
-                "winner": null,
+                "map": "Arabia",
+                "winner": "team1",
                 "civs": {
                   "team1": [
                     "",
@@ -223,18 +223,18 @@
                 }
               },
               {
-                "map": "",
-                "winner": null,
+                "map": "Arena",
+                "winner": "team1",
                 "civs": {
                   "team1": [
-                    "",
-                    "",
-                    ""
+                    "Dravídicos",
+                    "Bohemios",
+                    "Españoles"
                   ],
                   "team2": [
-                    "",
-                    "",
-                    ""
+                    "Persas",
+                    "Malíes",
+                    "Italianos"
                   ]
                 }
               },
@@ -255,7 +255,7 @@
                 }
               }
             ],
-            "winner": null
+            "winner": "team1"
           },
           {
             "id": "previa_2",
@@ -358,17 +358,17 @@
               "players": [
                 {
                   "name": "Chanchoman21",
-                  "elo": 1192,
-                  "nationality": "Chile"
+                  "elo": null,
+                  "nationality": null
                 },
                 {
                   "name": "Danichoo",
-                  "elo": 998,
-                  "nationality": "Chile"
+                  "elo": null,
+                  "nationality": null
                 },
                 {
                   "name": "Wolf",
-                  "elo": 1031,
+                  "elo": null,
                   "nationality": "Argentina"
                 }
               ]
@@ -450,11 +450,6 @@
       {
         "name": "Cuartos",
         "bestOf": 3,
-        "mapPool": [
-          "Arabia",
-          "Arena",
-          "Socotra"
-        ],
         "matches": [
           {
             "id": "cuart_1",
@@ -479,8 +474,24 @@
               ]
             },
             "team2": {
-              "name": "Ganador Previa 1 (Pijudos / Danteneta)",
-              "players": []
+              "name": "Pijudos",
+              "players": [
+                {
+                  "name": "Peskdt",
+                  "elo": 1248,
+                  "nationality": null
+                },
+                {
+                  "name": "NT | MCLovin1986",
+                  "elo": 1268,
+                  "nationality": "Argentina"
+                },
+                {
+                  "name": "Sleepy",
+                  "elo": 1146,
+                  "nationality": "Chile"
+                }
+              ]
             },
             "games": [
               {
@@ -784,16 +795,16 @@
             ],
             "winner": null
           }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Socotra"
         ]
       },
       {
         "name": "Semifinal",
         "bestOf": 3,
-        "mapPool": [
-          "Arabia",
-          "Arena",
-          "Túnel Amazónico"
-        ],
         "matches": [
           {
             "id": "sem_1",
@@ -907,18 +918,16 @@
             ],
             "winner": null
           }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Túnel Amazónico"
         ]
       },
       {
         "name": "Final",
         "bestOf": 5,
-        "mapPool": [
-          "Arabia",
-          "Arena",
-          "Claro Africano",
-          "Isla en equipos",
-          "Isla del Paraíso"
-        ],
         "matches": [
           {
             "id": "final",
@@ -1008,6 +1017,13 @@
             ],
             "winner": null
           }
+        ],
+        "mapPool": [
+          "Arabia",
+          "Arena",
+          "Claro Africano",
+          "Isla en equipos",
+          "Isla del Paraíso"
         ]
       }
     ]
